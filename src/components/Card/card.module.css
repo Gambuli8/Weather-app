@@ -1,0 +1,144 @@
+.card {
+    width: 1000px;
+    height: 285px;
+    position: relative;
+    padding: 25px;
+    background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, #FFF7B1 0%, rgba(255, 255, 255, 0) 71.88%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    box-shadow: 0px 155px 62px rgba(0, 0, 0, 0.01), 0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(0, 0, 0, 0.09), 0px 10px 21px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .date{
+    width: 100px;
+    margin-top: -10px;
+    margin-left: 50px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border: 1px solid transparent;
+  }
+  
+  .date:hover{
+    border-bottom: 1px solid rgba(87, 77, 51, 1);
+
+  }
+
+  .container {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: -35px;
+    top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.7);
+  }
+  
+  .cloud {
+    width: 250px;
+  }
+  
+  .front {
+    padding-top: 45px;
+    margin-left: 25px;
+    display: inline;
+    position: absolute;
+    z-index: 11;
+    animation: clouds 8s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes sunshines {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+  
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes clouds {
+    0% {
+      transform: translateX(15px);
+    }
+  
+    50% {
+      transform: translateX(0px);
+    }
+  
+    100% {
+      transform: translateX(15px);
+    }
+  }
+
+  .sectionLeft{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .sectionRight{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .card_header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .card_header span:first-child {
+    word-break: break-all;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 135%;
+    color: rgba(87, 77, 51, 0.66);
+  }
+  
+  .card_header span:last-child {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 110%;
+    color: rgba(87, 77, 51, 0.33);
+  }
+
+  span{
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: rgba(87, 77, 51, 0.33);
+  }
+
+  .temperaturas{
+    margin-top: 5px;
+    font-family:'Poppins', sans-serif ;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: black;
+  }
+
+  .temperaturas p{
+    margin: 0px;
+  }
+  
+  .temp {
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    color: rgba(87, 77, 51, 1);
+  }
