@@ -1,6 +1,6 @@
 .card {
-    width: 1000px;
-    height: 285px;
+    width: 400px;
+    height: 400px;
     position: relative;
     padding: 25px;
     background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, #FFF7B1 0%, rgba(255, 255, 255, 0) 71.88%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
@@ -8,6 +8,12 @@
     border-radius: 23px;
     transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     cursor: pointer;
+  }
+
+  .card_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .card:hover {
@@ -17,7 +23,6 @@
   .date{
     width: 100px;
     margin-top: -10px;
-    margin-left: 50px;
     padding-bottom: 5px;
     font-size: 20px;
     border: 1px solid transparent;
@@ -80,10 +85,10 @@
     }
   }
 
-  .sectionLeft{
+  .section1{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
   }
 
   .sectionRight{

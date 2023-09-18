@@ -31,7 +31,7 @@ export default function card({forecast, loadingData, CartData, weather }) {
 
   return (  
   <>
-    {/* {CartData ? */}
+    {CartData ?
         <motion.div
          className={style.card}
          initial={{x: -400, scale: 0}}
@@ -43,16 +43,11 @@ export default function card({forecast, loadingData, CartData, weather }) {
             type: 'spring'
          }}
          >
-            <section className={style.sectionLeft}>
-             <div className={style.container}>
-                <div className={style.cloud && style.front}>
-                <img src={iconUrl} alt="icon" width={150} height={150} style={{marginTop: '-50px'}} />
-                </div>
-            </div> 
+            <section className={style.section1}>
                 <div className={style.card_header}>
                     <span>{weather?.name}</span>
                     <span className={style.date}>{date}</span>
-                    {/* <span>{weather?.weather[0]?.description}</span> */}
+                    <span>{weather?.weather[0]?.description}</span>
                     <div className={style.temperaturas}>
                     <p>Temperatura Maxima: {(weather.main?.temp_max - 273.15).toFixed(0)}°C</p>
                     <p>Temperatura Minima: {(weather.main?.temp_min - 273.15).toFixed(0)}°C</p>
@@ -62,13 +57,10 @@ export default function card({forecast, loadingData, CartData, weather }) {
                 </div>
                     <span className={style.temp}>{(weather.main?.temp - 273.15).toFixed(0)}°C</span>
             </section>
-            <section className={style.sectionRight}>
-
-            </section>
                 </motion.div>
-             {/* : <h1>Ingrese una Ciudad</h1>
+              : <h1>Ingrese una Ciudad</h1>
              } 
-                <motion.div
+                {/* <motion.div
                 className={style.card}
                 >
                 <div className={style.container}>

@@ -17,20 +17,18 @@ export default function home() {
 
   return (
     <div className={style.container}>
-      <div className={style.switch} data-isOn={isOn} onClick={toggleSwitch}>
         <motion.div className={style.handle} layout transition={spring} />
-      </div>
         <motion.h1
          initial={{scale: 0}}
+         className={style.title}
          animate={{scale: 1 }}
          transition={{
-          duration: 2,
-          ease: 'easeInOut',
-          type: 'spring',
-          delay: 0.5
-        }}
-        
-         >Weather App</motion.h1>
+           duration: 2,
+           ease: 'easeInOut',
+           type: 'spring',
+           delay: 0.5
+          }}
+          >Weather App</motion.h1>
       <Panel/>
     </div>
   )
